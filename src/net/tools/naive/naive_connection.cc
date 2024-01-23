@@ -240,7 +240,7 @@ int NaiveConnection::DoConnectServer() {
     } else {
       rv = getsockopt(sd, SOL_IPV6, SO_ORIGINAL_DST, dst.addr, &dst.addr_len);
     }
-    if (rv == 0) {
+    if (true) {
       IPEndPoint ipe;
       if (ipe.FromSockAddr(dst.addr, dst.addr_len)) {
         const auto& addr = ipe.address();
